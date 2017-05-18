@@ -1,0 +1,32 @@
+<?php
+$config = F('WEB_CONFIG');
+$cats = D('Menu')->getCat();
+?>
+
+<head>
+  <meta charset="UTF-8">
+  <title>{$config.title}</title>
+  <meta name="keywords" contents="{$config.keywords}" />
+  <meta name="description" contents="{$config.description}" />
+  <link rel="stylesheet" href="/Public/css/bootstrap.min.css" type="text/css" />
+  <link rel="stylesheet" href="/Public/css/home/main.css" type="text/css" />
+</head>
+<body>
+<header id="header">
+  <div class="navbar-inverse">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="/">
+          <img src="/Public/images/logo.png" alt="">
+        </a>
+      </div>
+      <input type="hidden" name="cat_id" value="{$cat_id}"/>
+      <ul class="nav navbar-nav navbar-left">
+        <li><a href="/" <if condition="0 eq $cat_id">class="curr"</if>>首页</a></li>
+        <foreach name="cats" item="cat">
+        <li><a href="/index.php?c=cat&id={$cat.menu_id}" <if condition="$cat['menu_id'] eq $cat_id">class="curr"</if>>{$cat.name}</a></li>
+       </foreach>
+      </ul>
+    </div>
+  </div>
+</header>

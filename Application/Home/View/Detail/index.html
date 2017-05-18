@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<include file="Index/header"/>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-9">
+        <div class="news-detail">
+        <h1>{$news.title}</h1>
+        {$news.content}
+        </div>
+      </div>
+      <div class="col-sm-3 col-md-3">
+        <div class="right-title">
+          <h3>文章排行</h3>
+          <span>TOP ARTICLES</span>
+        </div>
+        <div class="right-content">
+          <ul>
+          <volist name="rankNews" id="vo" key="k">
+          <li class="num{$k} curr">
+              <a target="_blank" href="/index.php?c=detail&id={$vo.news_id}">{$vo.small_title}</a>
+              <if condition="$k eq 1">
+              <div class="intro">
+                {$vo.description}
+              </div>
+              </if>
+            </li>
+          </volist>
+          </ul>
+        </div>
+        <volist name="advNews" id="advNew">
+        <div class="right-hot">
+          <a target="_blank" href="{$advNew.url}"><img src="{$advNew.thumb}" alt="{$advNew.title}"></a>
+          {$advNew.title}
+        </div>
+        </volist>
+      </div>
+    </div>
+  </div>
+</section>
+</body>
+</html>

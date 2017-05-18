@@ -1,0 +1,754 @@
+[ 2017-05-18T12:29:32+08:00 ] 127.0.0.1 /index.php?m=admin&a=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+NOTIC: [8] Undefined variable: module D:\php\tp\ThinkPHP\Common\functions.php 第 995 行.
+NOTIC: [8] Undefined variable: var D:\php\tp\ThinkPHP\Common\functions.php 第 997 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\php\tp\ThinkPHP\Common\functions.php 第 997 行.
+NOTIC: [2] http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given D:\php\tp\ThinkPHP\Common\functions.php 第 997 行.
+
+[ 2017-05-18T12:29:58+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+NOTIC: [8] Undefined variable: module D:\php\tp\ThinkPHP\Common\functions.php 第 995 行.
+NOTIC: [8] Undefined variable: var D:\php\tp\ThinkPHP\Common\functions.php 第 997 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\php\tp\ThinkPHP\Common\functions.php 第 997 行.
+NOTIC: [2] http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given D:\php\tp\ThinkPHP\Common\functions.php 第 997 行.
+
+[ 2017-05-18T12:29:59+08:00 ] 127.0.0.1 /admin.php?&c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002501s ]
+
+[ 2017-05-18T12:30:08+08:00 ] 127.0.0.1 /index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="adong" ) LIMIT 1   [ RunTime:0.0075s ]
+SQL: UPDATE `cms_admin` SET `lastloginip`='127.0.0.1',`lastlogintime`='1495081808' WHERE ( admin_id=9 ) [ RunTime:0.0000s ]
+
+[ 2017-05-18T12:30:09+08:00 ] 127.0.0.1 /admin.php?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:31:03+08:00 ] 127.0.0.1 /admin.php?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0050s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:31:23+08:00 ] 127.0.0.1 /admin.php?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-18T12:32:02+08:00 ] 127.0.0.1 /admin.php?c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.065001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.065001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:32:05+08:00 ] 127.0.0.1 /admin.php?c=admin&a=personal&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.005000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( admin_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-18T12:32:10+08:00 ] 127.0.0.1 /admin.php?c=admin&a=personal&id=9
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( admin_id=9 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-18T12:32:13+08:00 ] 127.0.0.1 /admin.php?m=admin&c=basic&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0050s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.010000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.010000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:32:17+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-18T12:32:23+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:32:53+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0025s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:33:07+08:00 ] 127.0.0.1 /admin.php?c=admin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY lastlogintime desc  [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:33:12+08:00 ] 127.0.0.1 /admin.php?c=content&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\ContentController.class.php 第 26 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\ContentController.class.php 第 27 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 5 行.
+NOTIC: [8] Undefined index: title D:\php\tp\Application\Common\Model\NewsModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: title D:\php\tp\Application\Common\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position` WHERE `status` <> -1  [ RunTime:0.0100s ]
+NOTIC: [8] Undefined index: catid D:\php\tp\Application\Admin\Controller\ContentController.class.php 第 44 行.
+NOTIC: [8] Undefined index: title D:\php\tp\Application\Admin\Controller\ContentController.class.php 第 45 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:33:16+08:00 ] 127.0.0.1 /admin.php?m=admin&c=admin&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1 ORDER BY lastlogintime desc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b682812e058c4f7cab74d08ab9eabe11.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:33:17+08:00 ] 127.0.0.1 /admin.php?m=admin&c=content&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\ContentController.class.php 第 26 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\ContentController.class.php 第 27 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 5 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 5 行.
+NOTIC: [8] Undefined index: title D:\php\tp\Application\Common\Model\NewsModel.class.php 第 15 行.
+SQL: SELECT * FROM `cms_news` WHERE `status` <> -1 ORDER BY listorder desc,news_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined index: title D:\php\tp\Application\Common\Model\NewsModel.class.php 第 22 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` = 1 AND `type` = 0 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_position` WHERE `status` <> -1  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: catid D:\php\tp\Application\Admin\Controller\ContentController.class.php 第 44 行.
+NOTIC: [8] Undefined index: title D:\php\tp\Application\Admin\Controller\ContentController.class.php 第 45 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:33:18+08:00 ] 127.0.0.1 /admin.php?m=admin&c=menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:33:22+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-18T12:33:27+08:00 ] 127.0.0.1 /admin.php?m=admin&c=menu&a=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:34:00+08:00 ] 127.0.0.1 /admin.php?c=menu&a=index&type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.025000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.045000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002501s ]
+
+[ 2017-05-18T12:34:05+08:00 ] 127.0.0.1 /admin.php?c=menu&a=index&type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 0 AND `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-18T12:34:08+08:00 ] 127.0.0.1 /admin.php?c=menu&a=index&type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-18T12:34:12+08:00 ] 127.0.0.1 /admin.php?c=menu&a=listorder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: UPDATE `cms_menu` SET `listorder`='11' WHERE ( menu_id=1 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='8' WHERE ( menu_id=6 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='4' WHERE ( menu_id=7 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='2' WHERE ( menu_id=19 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='1' WHERE ( menu_id=10 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='0' WHERE ( menu_id=20 ) [ RunTime:0.0000s ]
+
+[ 2017-05-18T12:34:13+08:00 ] 127.0.0.1 /admin.php?c=menu&a=index&type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.037500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.037500s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:34:20+08:00 ] 127.0.0.1 /admin.php?c=menu&a=listorder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: UPDATE `cms_menu` SET `listorder`='11' WHERE ( menu_id=1 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='8' WHERE ( menu_id=6 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='4' WHERE ( menu_id=7 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='2' WHERE ( menu_id=19 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='1' WHERE ( menu_id=10 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='99' WHERE ( menu_id=20 ) [ RunTime:0.0000s ]
+
+[ 2017-05-18T12:34:21+08:00 ] 127.0.0.1 /admin.php?c=menu&a=index&type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:34:26+08:00 ] 127.0.0.1 /admin.php?c=menu&a=listorder
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='99' WHERE ( menu_id=20 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='11' WHERE ( menu_id=1 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='8' WHERE ( menu_id=6 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='4' WHERE ( menu_id=7 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='2' WHERE ( menu_id=19 ) [ RunTime:0.0000s ]
+SQL: UPDATE `cms_menu` SET `listorder`='199' WHERE ( menu_id=10 ) [ RunTime:0.0000s ]
+
+[ 2017-05-18T12:34:27+08:00 ] 127.0.0.1 /admin.php?c=menu&a=index&type=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `type` = 1 AND `status` <> -1 LIMIT 1   [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2017-05-18T12:34:28+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002500s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+NOTIC: [8] Undefined index: p D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 14 行.
+NOTIC: [8] Undefined index: pageSize D:\php\tp\Application\Admin\Controller\MenuController.class.php 第 15 行.
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc,menu_id desc LIMIT 0,10   [ RunTime:0.0025s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: sing_path D:\php\tp\ThinkPHP\Common\functions.php 第 992 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002500s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: nav D:\php\tp\Application\Runtime\Cache\Admin\b956215329b6f9aca22277599a4efdfc.php 第 100 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002501s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002500s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002500s ]
+
+[ 2017-05-18T12:34:30+08:00 ] 127.0.0.1 /admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE ( lastlogintime >=1495036800 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::save() should be compatible with Think\Model::save($data = '', $options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) D:\php\tp\Application\Common\Model\NewsModel.class.php 第 120 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `cms_news` ORDER BY count desc LIMIT 1   [ RunTime:0.0025s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002500s ]
+SQL: SELECT * FROM `cms_menu` WHERE `type` = 1 AND `status` = 1 ORDER BY listorder desc,menu_id desc  [ RunTime:0.0025s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032501s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032501s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
